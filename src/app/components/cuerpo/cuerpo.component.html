@@ -1,0 +1,92 @@
+<div class="container mt-5">
+
+    <form [formGroup] = "form" (submit)="agregarPersona()">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group row">
+                    <label for="inputPassword" >Cedula</label>
+                    
+                      <input type="text" class="form-control form-control-sm" placeholder="Cedula" formControlName="cedula" id="cedula">
+    
+                    
+                    
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group row">
+                    <label for="inputPassword" >Nombres</label>
+                    
+                      <input type="text" formControlName="nombres" class="form-control form-control-sm" placeholder="Nombres">
+                    
+                    
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Apellidos</label>
+                    
+                      <input type="text" formControlName="apellidos" class="form-control form-control-sm" placeholder="Apellidos">
+                   
+                   
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
+                   
+                      <input type="date" formControlName="fechaNacimiento" class="form-control form-control-sm">
+                  
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+             <div class="col-sm-3"></div>  
+             <button class="btn btn-primary col-sm-4"><i class="bi bi-person-plus-fill"></i> Agregar</button>
+         </div>
+
+    </form>
+
+    
+        
+        
+
+      
+        &nbsp;
+        <div *ngIf="listPersona.length>0">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let est of listPersona">
+                    <th scope="row">1</th>
+                    <td>{{est.cedula}}</td>
+                    <td>{{est.nombres}}</td>
+                    <td>{{est.apellidos}}</td>
+                    <td>{{est.fechaNacimiento | date}} </td>
+                    <td></td>
+                  </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+

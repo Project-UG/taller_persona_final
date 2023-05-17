@@ -1,0 +1,21 @@
+input{
+    text-align: center;
+    height:fit-content;
+}
+
+.form-control-lg{
+    font-size: x-large;
+}
+
+.cursor{
+    cursor: pointer;
+}
+.icon{
+    position: absolute;
+    display: block;
+    bottom: .5rem;
+    right: 1rem;
+    
+    user-select: none;
+    cursor: pointer;
+  }
